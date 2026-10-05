@@ -50,8 +50,11 @@
 
   /* Nav + hero */
   .site-nav{position:sticky;top:0;z-index:20;background:rgba(226,212,244,.92);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-  .site-nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;font-size:.95rem}
-  .site-nav img{height:34px;width:auto;display:block}
+  .site-nav .wrap{display:flex;align-items:center;justify-content:space-between;padding:1rem 0;font-size:.95rem;transition:padding .25s ease}
+  .site-nav img{height:56px;width:auto;display:block;transition:height .25s ease}
+  .site-nav.scrolled .wrap{padding:.9rem 0}
+  .site-nav.scrolled img{height:34px}
+  @media (prefers-reduced-motion:reduce){.site-nav .wrap,.site-nav img{transition:none}}
   .site-nav ul{list-style:none;display:flex;gap:1.5rem;margin:0;padding:0}
   .site-nav a{text-decoration:none;font-weight:500}
   .site-nav a:hover{text-decoration:underline}
@@ -152,7 +155,7 @@
       <li><a href="#services">Work with me</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#expertise">What I do</a></li>
-      <li><a href="mailto:connect@hansenhunt.com?subject=Let%27s%20connect">Email</a></li>
+      <li><a href="mailto:connect@hansenhunt.com?subject=Let%27s%20connect">Let's Connect</a></li>
     </ul>
   </div>
 </nav>
@@ -300,6 +303,9 @@
 <script>
 (function(){
   var nav=document.querySelector('.site-nav'),btn=nav&&nav.querySelector('.menu-btn');
+  if(!nav)return;
+  function onScroll(){nav.classList.toggle('scrolled',window.scrollY>24);}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();
   if(!btn)return;
   function set(open){nav.classList.toggle('open',open);btn.setAttribute('aria-expanded',open?'true':'false');}
   btn.addEventListener('click',function(){set(!nav.classList.contains('open'));});
