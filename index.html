@@ -107,6 +107,10 @@
   .card .ask:hover{color:var(--coral)}
   .c-yellow{background:var(--yellow);--tint:var(--yellow)} .c-mint{background:var(--mint);--tint:var(--mint)} .c-lavender{background:var(--lavender);--tint:var(--lavender)} .c-pink{background:var(--pink);--tint:var(--pink)}
   .c-navy{background:var(--navy);color:#fff;--tint:var(--yellow)} .c-navy .label{color:rgba(255,255,255,.7)} .c-navy .ask:hover{color:var(--yellow)}
+  .crew-layers{display:grid;gap:.9rem;margin:0 0 1.5rem}
+  .crew-layers > div{border-top:1px solid rgba(3,41,107,.18);padding-top:.75rem}
+  .crew-layers .label{font-size:.7rem}
+  .crew-layers p{margin:.3rem 0 0;font-size:.95rem;opacity:.9}
   .card-photo{position:relative;isolation:isolate;overflow:hidden;background:var(--navy);margin:-1.75rem -1.75rem 1.25rem;aspect-ratio:16/9;flex:none}
   .card-photo img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.08);mix-blend-mode:screen}
   .card-photo::after{content:"";position:absolute;inset:0;background:var(--tint);mix-blend-mode:multiply}
@@ -267,7 +271,17 @@
           <div>
             <span class="label">Connection Crew</span>
             <h3>Superconnectors for your event</h3>
-            <p>Connection by design, so the relationships your attendees need already exist when they need them. Bring a trained team of connection professionals to your conference or gathering. We shape the connection arc, train your team and volunteers, and facilitate the moments that people remember.</p>
+            <p>Connection by design, so the relationships your attendees need already exist when they need them. Two layers, working together.</p>
+            <div class="crew-layers">
+              <div>
+                <span class="label">The people</span>
+                <p>Trained Connectors and facilitators on site who shape the connection arc, make introductions, and make sure nobody eats lunch alone.</p>
+              </div>
+              <div>
+                <span class="label">The technology</span>
+                <p>Badge technology by Covve. Tap someone's badge and you both receive an intro email on the spot. Everyone leaves with a complete list of who they met. No app to download.</p>
+              </div>
+            </div>
           </div>
           <a class="ask" href="mailto:connect@hansenhunt.com?subject=Connection%20Crew%20for%20our%20event">Ask about Connection Crew</a>
         </article>
@@ -278,6 +292,12 @@
           <a class="ask" href="mailto:connect@hansenhunt.com?subject=Circle%20facilitation">Start a circle</a>
         </article>
         <article class="card c-navy">
+          <div class="card-photo">
+            <picture>
+              <source type="image/webp" srcset="img/card-buddy-800.webp 800w, img/card-buddy-1200.webp 1200w" sizes="(min-width: 64rem) 22rem, (min-width: 44rem) 50vw, 100vw">
+              <img src="img/card-buddy-800.jpg" srcset="img/card-buddy-800.jpg 800w, img/card-buddy-1200.jpg 1200w" sizes="(min-width: 64rem) 22rem, (min-width: 44rem) 50vw, 100vw" width="800" height="600" alt="Neighbors gathered with coffee on a brick patio at the Mission Beach Neighbor Hang" loading="lazy">
+            </picture>
+          </div>
           <span class="label">Connection Buddy</span>
           <h3>Find a place for your group to meet</h3>
           <p>Coming soon. Tell Connection Buddy what your club or community group needs, in plain words. It finds San Diego spaces that actually fit, shows what is known and what is not, and gets you a warm path to the person who can say yes. Built with club leaders first.</p>
