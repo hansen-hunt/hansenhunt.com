@@ -16,6 +16,10 @@ about a minute. HTTPS is enforced in the Pages settings.
 The one third-party script is HubSpot Forms, loaded only when someone opens the contact
 popup (portal 303888, form 54c40da1-4fbb-4acf-9a3c-21901a546821, region na1). Hansen
 styled the form inside HubSpot to match the site.
+hansenhunt.com is registered in HubSpot under Settings > Tracking & Analytics > Tracking
+Code > Advanced Tracking > Additional site domains. Without that, HubSpot files every
+submission from the site under Spam as "Unregistered Site Domain". Any new domain that
+embeds this form (a Connection Crew page, for instance) needs adding there too.
 
 ## Workflow Hansen expects
 
@@ -95,9 +99,6 @@ No photo is used twice on the page.
 
 ## Open items (Oct 2026)
 
-- HubSpot form: Hansen reported that test submissions showed the thank-you message but
-  did not appear in his CRM (Oct 9). Unresolved at last check; see the Submissions tab
-  and spam filter on the form before changing anything on the site.
 
 - LinkedIn Company Page URL for the footer links (placeholder comment in place).
 - A dedicated page for the Covve badge technology / Connection Crew, built from
