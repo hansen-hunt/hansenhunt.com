@@ -95,7 +95,10 @@ No photo is used twice on the page.
 
 ## Open items (Oct 2026)
 
-- Circles card has no photo; Hansen wants the boat-bow circle photo, not yet received as a file.
+- HubSpot form: Hansen reported that test submissions showed the thank-you message but
+  did not appear in his CRM (Oct 9). Unresolved at last check; see the Submissions tab
+  and spam filter on the form before changing anything on the site.
+
 - LinkedIn Company Page URL for the footer links (placeholder comment in place).
 - A dedicated page for the Covve badge technology / Connection Crew, built from
   `docs/connection-crew-badge-tech.md`.

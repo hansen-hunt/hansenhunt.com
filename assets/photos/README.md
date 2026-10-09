@@ -13,7 +13,9 @@ is served by the site.
 | balboa-park-table-timken-wide.jpg | Wide shot of the tables beside the Timken Museum, Balboa Park Table | Unused |
 | culturecon-west-crew-purple-balloons.jpg | Connection Crew team with attendees in front of purple balloons, CultureCon West | Connection Crew card (`card-crew-*`) |
 | culturecon-step-and-repeat-group.jpg | Group cheering at a CultureCon step-and-repeat | Unused (same event as the balloons shot) |
-| mission-beach-neighbor-hang.jpg | Neighbors with coffee on the patio, Mission Beach Neighbor Hang (Hansen in foreground) | Connection Buddy card (`card-buddy-*`) |
+| mission-beach-neighbor-hang.jpg | Neighbors with coffee on the patio, Mission Beach Neighbor Hang (Hansen in foreground). This is Hansen and Sara's neighborhood gathering, not a Connection Buddy event; Hansen is fine with it standing in on the Buddy card for now | Connection Buddy card (`card-buddy-*`) |
+| boat-circle-dusk-brightened.jpg | Hansen facilitating a circle at the bow of a boat at dusk, brightened edit made for social | Circles card (`card-circles-*`) |
+| boat-circle-dusk-original.jpg | Same moment, unedited, darker | Unused |
 | hansen-headshot-maroon.jpg | Headshot, maroon shirt, grey background. Hansen's main bio picture | About sidebar (`portrait-*`) |
 | comnet-2025-denver-longer-table.jpg | Longer table at ComNet 2025, Denver (not San Diego) | Unused |
 | b-side-run-club-team.jpg | B-Side run club team photo after a race | Unused |
@@ -21,5 +23,5 @@ is served by the site.
 Rules Hansen set: never use the same photo twice on a page; the Denver table is not a
 Longer Tables San Diego image; only photos Hansen owns or has permission for.
 
-Still wanted, not yet received as files: the boat-bow circle at dusk (for the Circles
-card), the overhead boat group shot, and two Boston Marathon finish-line photos.
+Not yet received as files: the overhead boat group shot and two Boston Marathon
+finish-line photos (neither currently needed).
