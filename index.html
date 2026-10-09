@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hansen Hunt</title>
-<meta name="description" content="Connection by Hansen: designing experiences and communities where people feel seen, make real friends, and build their support systems. Hansen Hunt is a community builder, certified facilitator, and connection experience designer in San Diego.">
+<meta name="description" content="Connection by Hansen: designing experiences and communities where people feel seen, make real friends, and build their support systems. Hansen Hunt is a community builder, certified facilitator, and connection experience designer in San Diego exploring why resilience is relational.">
 <meta property="og:title" content="Hansen Hunt">
 <meta property="og:description" content="Community builder, certified facilitator, and connection experience designer.">
 <meta property="og:image" content="https://hansenhunt.com/og-image.png">
@@ -137,6 +137,19 @@
   .pillar li a{text-decoration:none}
   .pillar li a:hover{text-decoration:underline}
 
+  /* The idea behind the work */
+  .idea .wrap{border-top:1px solid var(--rule);padding-top:4.5rem}
+  .idea{padding-top:0}
+  .pathway{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 0;list-style:none;margin:0 0 2.5rem;padding:0}
+  .pathway li{display:flex;align-items:center}
+  .pathway li span{border:1px solid var(--rule);border-radius:999px;padding:.4rem .9rem;font-size:.88rem;font-weight:500;white-space:nowrap}
+  .pathway li+li::before{content:"\2192";color:var(--soft);margin:0 .5rem;font-size:.9rem}
+  .pathway li:last-child span{background:var(--navy);color:#fff;border-color:var(--navy)}
+  .idea-close{font-family:var(--font-serif);font-size:clamp(1.35rem,2.6vw,1.8rem);line-height:1.3;max-width:30ch;margin:0}
+  .upcoming{margin:2.5rem 0 0;padding:1rem 1.25rem;border:1px solid var(--rule);border-radius:12px;font-size:.95rem;color:var(--soft);max-width:46rem}
+  .upcoming strong{color:var(--navy);font-weight:600}
+  .upcoming a{white-space:nowrap}
+
   /* Photo band */
   .band{padding:0;position:relative;background:var(--navy);color:#fff}
   .band img{display:block;width:100%;height:clamp(16rem,42vw,32rem);object-fit:cover;object-position:center 40%}
@@ -223,7 +236,7 @@
           </div>
           <span class="label">Event activations</span>
           <h3>Longer Tables and beyond</h3>
-          <p>Shared-meal activations and large-scale gatherings that turn a crowd of strangers into neighbors for an afternoon, and often longer.</p>
+          <p>Shared meals and large gatherings that turn a crowd of strangers into neighbors, and start the pathways care will travel later.</p>
           <a class="ask" href="mailto:connect@hansenhunt.com?subject=Event%20activation">Plan an activation</a>
         </article>
         <article class="card c-yellow wide">
@@ -236,20 +249,20 @@
           <div>
             <span class="label">Connection Crew</span>
             <h3>Superconnectors for your event</h3>
-            <p>Bring a trained team of connection professionals to your conference or gathering, so meaningful connection happens by design instead of by chance. We shape the connection arc, train your team and volunteers, and facilitate the moments that people remember.</p>
+            <p>Connection by design, so the relationships your attendees need already exist when they need them. Bring a trained team of connection professionals to your conference or gathering. We shape the connection arc, train your team and volunteers, and facilitate the moments that people remember.</p>
           </div>
           <a class="ask" href="mailto:connect@hansenhunt.com?subject=Connection%20Crew%20for%20our%20event">Ask about Connection Crew</a>
         </article>
         <article class="card c-pink">
           <span class="label">Circles</span>
           <h3>Circle and support group facilitation</h3>
-          <p>Design and facilitation for men's circles, peer support groups, and leadership forums built on trust, shared leadership, and mutual support.</p>
+          <p>Circles and peer groups built on trust, shared leadership, and mutual support: the practice ground for a community capable of hard things.</p>
           <a class="ask" href="mailto:connect@hansenhunt.com?subject=Circle%20facilitation">Start a circle</a>
         </article>
         <article class="card c-navy">
           <span class="label">Connection Buddy</span>
           <h3>Get connected in San Diego</h3>
-          <p>New here, or ready to find your people? Connection Buddy is a trusted local guide to the gatherings and groups worth your time.</p>
+          <p>New here, or ready to find your people? Connection Buddy is a trusted local guide to the gatherings and groups where pathways get built, before you need them.</p>
           <a class="ask" href="mailto:connect@hansenhunt.com?subject=Help%20me%20get%20connected%20in%20San%20Diego">Find your people</a>
         </article>
         <article class="card c-mint">
@@ -261,10 +274,36 @@
           </div>
           <span class="label">Speaking</span>
           <h3>Talks on belonging</h3>
-          <p>Occasional talks on belonging, loneliness, and how communities are actually built, usually as part of a larger connection activation. Practical, personal, and never a lecture.</p>
+          <p>Occasional talks, usually with Sara, on why resilience is relational and how care becomes infrastructure. Practical, personal, and never a lecture.</p>
           <a class="ask" href="mailto:connect@hansenhunt.com?subject=Speaking%20inquiry">Ask about a talk</a>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="idea" id="idea">
+    <div class="wrap">
+      <div class="intro">
+        <span class="label kicker">Why this matters</span>
+        <h2>Resilience is relational.</h2>
+        <p>We're told to be resilient on our own: manage stress, develop grit, bounce back. But much of our resilience doesn't live inside us. It lives between us, in the relationships we've built and the care that moves through them.</p>
+        <p>Connection creates the pathways. Compassion moves care through them. Repeated action builds shared capacity. That capacity is community resilience, and we build it before we need it.</p>
+      </div>
+      <ol class="pathway" aria-label="The care pathway">
+        <li><span>Invitation</span></li>
+        <li><span>Repeated contact</span></li>
+        <li><span>Familiarity</span></li>
+        <li><span>Trust</span></li>
+        <li><span>Understanding</span></li>
+        <li><span>Compassion</span></li>
+        <li><span>Action</span></li>
+        <li><span>Shared capacity</span></li>
+        <li><span>Resilience</span></li>
+      </ol>
+      <p class="idea-close">Low-stakes connection creates high-stakes capacity.</p>
+      <!-- upcoming:start -->
+      <p class="upcoming"><strong>Upcoming:</strong> Resilience Is Relational, a Big Idea Night with Sara Schairer. Nov 12, 2026, North Park, San Diego. <a href="https://eventship.com/event/resilience-is-relational-building-community-before-we-need-it" rel="noopener">Details and registration</a></p>
+      <!-- upcoming:end -->
     </div>
   </section>
 
@@ -285,7 +324,7 @@
         <p>I lead <a href="https://covve.com/connectioncrew/">Connection Crew by Covve</a>, a global team of connection professionals working to help one million people feel more connected by 2030. Through Connection Crew, I partner with conferences and event teams to bring intentional connection into the experience rather than leaving it to chance: designing the connection arc, training event teams and volunteers, and facilitating experiences where people feel seen, heard, valued, and understood.</p>
         <p>My facilitation practice is grounded in extensive training through YPO Key Associate Forums, years of facilitating men's work with <a href="https://mkpusa.org/">The ManKind Project</a>, and three years leading the Joyful Connection Masterclass. The focus is always the same: building the trust, shared leadership, and mutual support that help groups accomplish difficult things without burning people out.</p>
         <p>In San Diego, I co-founded the <a href="https://www.chamberofconnection.org/">San Diego Chamber of Connection</a>, co-lead the San Diego Community Builders Network, and co-founded <a href="https://www.longertablessandiego.org/">Longer Tables San Diego</a>. Following the Balboa Park Table, Longer Tables San Diego is preparing to bring 3,000 San Diegans together for the Waterfront Park Table in spring 2027.</p>
-        <p>Closer to home, Sara and I co-created the Mission Beach Neighbor Hang, a monthly neighborhood gathering we have hosted with neighbors since May 2024. What began with coffee and bagels has become a living experiment in how small, repeated moments of connection build trust, compassion, and a community's capacity to care for one another.</p>
+        <p>Closer to home, Sara and I co-created the Mission Beach Neighbor Hang, a monthly neighborhood gathering we have hosted with neighbors since May 2024. What began with coffee and bagels has become a living experiment in how small, repeated moments of connection build trust, compassion, and a community's capacity to care for one another. That experiment is where the idea that resilience is relational came from, and it's the lens for everything above.</p>
         <p>I love my fiancée and co-presenter, Sara, my family, men's circles, my teammates, my dog Obi-Wan, tacos, meaningful conversations, and creating spaces where people feel they belong.</p>
       </div>
     </div>
@@ -339,6 +378,7 @@
           <ul>
             <li><strong><a href="https://covve.com/connectioncrew/">Connection Crew by Covve</a></strong><span>Lead; one million people more connected by 2030</span></li>
             <li><strong>Connection Buddy</strong><span>A trusted local guide to getting connected in San Diego</span></li>
+            <li><strong>Relational resilience</strong><span>With Sara Schairer, exploring how connection and compassion become a community's capacity to handle hard things</span></li>
           </ul>
         </div>
       </div>
