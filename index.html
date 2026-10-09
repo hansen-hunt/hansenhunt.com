@@ -179,6 +179,17 @@
   .ways{display:flex;flex-wrap:wrap;gap:.75rem 2rem;margin:2rem 0 0;padding:0;list-style:none;font-size:1.05rem}
   .ways a{text-decoration-color:var(--yellow)}
   .sign{margin-top:3rem;font-family:var(--font-serif);font-size:1.3rem;color:#fff}
+  /* Connect popup */
+  .connect-modal{border:0;padding:0;background:transparent;width:min(100% - 2rem,34rem);max-height:calc(100dvh - 2rem);overflow:visible}
+  .connect-modal::backdrop{background:rgba(3,41,107,.55);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px)}
+  .modal-panel{position:relative;background:var(--paper);color:var(--navy);border-radius:20px;padding:2rem;max-height:calc(100dvh - 2rem);overflow:auto;box-shadow:0 30px 60px -30px rgba(3,41,107,.5)}
+  .modal-panel h2{font-size:clamp(1.6rem,4vw,2.1rem);margin-bottom:.25rem;padding-right:2.5rem}
+  .modal-close{position:absolute;top:.9rem;right:.9rem;width:2.5rem;height:2.5rem;border:0;border-radius:999px;background:transparent;color:var(--navy);font-size:1.6rem;line-height:1;cursor:pointer}
+  .modal-close:hover{background:var(--mint)}
+  .modal-form{min-height:14rem;margin-top:1.25rem}
+  .modal-alt{margin:1.25rem 0 0;font-size:.9rem;color:var(--soft)}
+  @media (max-width:40rem){.modal-panel{padding:1.5rem 1.25rem}}
+
   footer{background:var(--navy);color:rgba(255,255,255,.6);padding:0 0 2rem;font-size:.85rem}
   footer .wrap{border-top:1px solid rgba(255,255,255,.15);padding-top:1.25rem;display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem}
   .foot-brand{flex-basis:100%;margin:0;font-family:var(--font-serif);font-size:1.1rem;color:#fff}
@@ -261,9 +272,9 @@
         </article>
         <article class="card c-navy">
           <span class="label">Connection Buddy</span>
-          <h3>Get connected in San Diego</h3>
-          <p>New here, or ready to find your people? Connection Buddy is a trusted local guide to the gatherings and groups where pathways get built, before you need them.</p>
-          <a class="ask" href="mailto:connect@hansenhunt.com?subject=Help%20me%20get%20connected%20in%20San%20Diego">Find your people</a>
+          <h3>Find a place for your group to meet</h3>
+          <p>Coming soon. Tell Connection Buddy what your club or community group needs, in plain words. It finds San Diego spaces that actually fit, shows what is known and what is not, and gets you a warm path to the person who can say yes. Built with club leaders first.</p>
+          <a class="ask" href="mailto:connect@hansenhunt.com?subject=Finding%20a%20place%20for%20our%20group">Need a place now? Email me</a>
         </article>
         <article class="card c-mint">
           <div class="card-photo">
@@ -323,7 +334,7 @@
         <p>After years of professional success alongside loneliness and isolation, I made a deliberate decision to change how I was living. Sobriety, endurance running, men's work, and committed support circles transformed my life and shaped the work I do today.</p>
         <p>I lead <a href="https://covve.com/connectioncrew/">Connection Crew by Covve</a>, a global team of connection professionals working to help one million people feel more connected by 2030. Through Connection Crew, I partner with conferences and event teams to bring intentional connection into the experience rather than leaving it to chance: designing the connection arc, training event teams and volunteers, and facilitating experiences where people feel seen, heard, valued, and understood.</p>
         <p>My facilitation practice is grounded in extensive training through YPO Key Associate Forums, years of facilitating men's work with <a href="https://mkpusa.org/">The ManKind Project</a>, and three years leading the Joyful Connection Masterclass. The focus is always the same: building the trust, shared leadership, and mutual support that help groups accomplish difficult things without burning people out.</p>
-        <p>In San Diego, I co-founded the <a href="https://www.chamberofconnection.org/">San Diego Chamber of Connection</a>, co-lead the San Diego Community Builders Network, and co-founded <a href="https://www.longertablessandiego.org/">Longer Tables San Diego</a>. Following the Balboa Park Table, Longer Tables San Diego is preparing to bring 3,000 San Diegans together for the Waterfront Park Table in spring 2027.</p>
+        <p>In San Diego, I co-founded the <a href="https://www.chamberofconnection.org/">San Diego Chamber of Connection</a>, co-lead the San Diego Community Builders Network, and co-founded <a href="https://www.longertablessandiego.org/">Longer Tables San Diego</a>. Following the Balboa Park Table, Longer Tables San Diego is preparing to bring 3,000 San Diegans together for the Waterfront Park Table in spring 2027. Connection Buddy grows out of that work: a way to help the people who bring people together find the right place, the right person, and the next step.</p>
         <p>Closer to home, Sara and I co-created the Mission Beach Neighbor Hang, a monthly neighborhood gathering we have hosted with neighbors since May 2024. What began with coffee and bagels has become a living experiment in how small, repeated moments of connection build trust, compassion, and a community's capacity to care for one another. That experiment is where the idea that resilience is relational came from, and it's the lens for everything above.</p>
         <p>I love my fiancée and co-presenter, Sara, my family, men's circles, my teammates, my dog Obi-Wan, tacos, meaningful conversations, and creating spaces where people feel they belong.</p>
       </div>
@@ -377,7 +388,7 @@
           <p>Designing experiences and tools so connection happens on purpose.</p>
           <ul>
             <li><strong><a href="https://covve.com/connectioncrew/">Connection Crew by Covve</a></strong><span>Lead; one million people more connected by 2030</span></li>
-            <li><strong>Connection Buddy</strong><span>A trusted local guide to getting connected in San Diego</span></li>
+            <li><strong>Connection Buddy</strong><span>Helping San Diego club and community leaders find a place to meet, with a warm intro instead of a cold inquiry. Coming soon.</span></li>
             <li><strong>Relational resilience</strong><span>With Sara Schairer, exploring how connection and compassion become a community's capacity to handle hard things</span></li>
           </ul>
         </div>
@@ -413,8 +424,47 @@
   </div>
 </footer>
 
+<dialog class="connect-modal" id="connect-modal" aria-labelledby="connect-title">
+  <div class="modal-panel">
+    <button class="modal-close" type="button" aria-label="Close" data-close>&times;</button>
+    <span class="label kicker">Let's connect</span>
+    <h2 id="connect-title">How can I help?</h2>
+    <div class="modal-form">
+      <div class="hs-form-frame" data-region="na1" data-form-id="54c40da1-4fbb-4acf-9a3c-21901a546821" data-portal-id="303888"></div>
+    </div>
+    <p class="modal-alt">Prefer email? <a href="mailto:connect@hansenhunt.com">connect@hansenhunt.com</a></p>
+  </div>
+</dialog>
+
 <script>
 (function(){
+  /* Connect popup: every mailto CTA opens the form instead; the mailto stays as the no-script fallback */
+  var modal=document.getElementById('connect-modal'),title=document.getElementById('connect-title'),loaded=false;
+  var headings={
+    'Event activation':'Plan an activation',
+    'Connection Crew for our event':'Ask about Connection Crew',
+    'Circle facilitation':'Start a circle',
+    'Finding a place for our group':'Find a place for your group',
+    'Speaking inquiry':'Ask about a talk'
+  };
+  function openModal(subject){
+    if(!modal||typeof modal.showModal!=='function')return false;
+    title.textContent=headings[subject]||'How can I help?';
+    if(!loaded){loaded=true;var sc=document.createElement('script');sc.src='https://js.hsforms.net/forms/embed/303888.js';sc.defer=true;document.body.appendChild(sc);}
+    modal.showModal();
+    return true;
+  }
+  document.querySelectorAll('a[href^="mailto:connect@hansenhunt.com?subject="]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var subject=decodeURIComponent((a.getAttribute('href').split('subject=')[1]||'').replace(/\+/g,' '));
+      if(openModal(subject))e.preventDefault();
+    });
+  });
+  if(modal){
+    modal.querySelectorAll('[data-close]').forEach(function(b){b.addEventListener('click',function(){modal.close();});});
+    modal.addEventListener('click',function(e){if(e.target===modal)modal.close();});
+  }
+
   var nav=document.querySelector('.site-nav'),btn=nav&&nav.querySelector('.menu-btn');
   if(!nav)return;
   function onScroll(){nav.classList.toggle('scrolled',window.scrollY>24);}
