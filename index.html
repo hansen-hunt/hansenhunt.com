@@ -151,11 +151,18 @@
   .upcoming a{white-space:nowrap}
 
   /* Photo band */
-  .band{padding:0;position:relative;background:var(--navy);color:#fff}
-  .band img{display:block;width:100%;height:clamp(18rem,50vw,40rem);object-fit:cover;object-position:center 35%}
-  .band-caption{position:absolute;inset:auto 0 0 0;padding:4rem 0 1.75rem;background:linear-gradient(180deg,rgba(3,41,107,0) 0%,rgba(3,41,107,.75) 100%)}
-  .band-caption .label{color:rgba(255,255,255,.75);display:block;margin-bottom:.35rem}
-  .band-caption p{margin:0;font-family:var(--font-serif);font-size:clamp(1.2rem,2.4vw,1.6rem);line-height:1.3;max-width:34ch}
+  .band{background:var(--navy);color:#fff;padding:3rem 0}
+  .band .wrap{display:grid;grid-template-columns:1fr;gap:2rem;align-items:center}
+  .band picture{display:block;border-radius:20px;overflow:hidden;background:#021c4a}
+  .band img{display:block;width:100%;height:auto;aspect-ratio:3/4;object-fit:cover}
+  .band-caption .label{color:rgba(255,255,255,.75);display:block;margin-bottom:.75rem}
+  .band-caption p{margin:0;font-family:var(--font-serif);font-size:clamp(1.5rem,2.8vw,2.1rem);line-height:1.25;max-width:22ch}
+  .band-caption .band-sub{font-family:var(--font-sans);font-size:1.05rem;line-height:1.6;color:rgba(255,255,255,.8);margin-top:1rem;max-width:40ch}
+  @media (min-width:56rem){
+    .band{padding:4rem 0}
+    .band .wrap{grid-template-columns:minmax(0,1fr) minmax(18rem,24rem);gap:4rem}
+    .band picture{order:2}
+  }
 
   /* About */
   .about{background:var(--mint)}
@@ -336,15 +343,16 @@
   </section>
 
   <section class="band" aria-label="Longer Tables San Diego">
-    <picture>
-      <source type="image/webp" srcset="img/band-botanical-1600.webp 1600w, img/band-botanical-2400.webp 2400w" sizes="100vw">
-      <img src="img/band-botanical-1600.jpg" srcset="img/band-botanical-1600.jpg 1600w, img/band-botanical-2400.jpg 2400w" sizes="100vw" width="1600" height="1067" alt="Neighbors sharing dinner at one long table beneath string lights and the lit dome of the Botanical Building at the Balboa Park Table" loading="lazy">
-    </picture>
-    <div class="band-caption">
-      <div class="wrap">
+    <div class="wrap">
+      <div class="band-caption">
         <span class="label">Longer Tables San Diego</span>
-        <p>The Balboa Park Table. Next: 3,000 San Diegans at one table, Waterfront Park, spring 2027.</p>
+        <p>The Balboa Park Table.</p>
+        <p class="band-sub">Next: 3,000 San Diegans at one table at Waterfront Park, spring 2027.</p>
       </div>
+      <picture>
+        <source type="image/webp" srcset="img/band-botanical-900.webp 900w, img/band-botanical-1350.webp 1350w" sizes="(min-width: 56rem) 24rem, 100vw">
+        <img src="img/band-botanical-900.jpg" srcset="img/band-botanical-900.jpg 900w, img/band-botanical-1350.jpg 1350w" sizes="(min-width: 56rem) 24rem, 100vw" width="900" height="1200" alt="Neighbors sharing dinner at one long table beneath string lights and the lit dome of the Botanical Building at the Balboa Park Table" loading="lazy">
+      </picture>
     </div>
   </section>
 
