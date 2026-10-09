@@ -2,8 +2,8 @@
 
 Read this first. It is the memory for this site across sessions. The repository is
 public, so nothing here or in `docs/` may be confidential. Internal notes (pricing
-arrangements, partner specifics not meant for the web) live in a private Claude Doc in
-Hansen's account titled "Connection by Hansen: internal notes".
+arrangements, partner specifics not meant for the web) stay in Hansen's own source
+documents and are never copied into this repository.
 
 ## What this is
 
